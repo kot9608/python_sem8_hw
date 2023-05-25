@@ -40,11 +40,15 @@ def search(book: str, info: str) -> str:
         if info in contact:
             s.append(contact)
     if len(s)==1:
-        return print(s)
+        print('Результат поиска: 's)
+        return
     if len(s)>1:
-        return (print(s), search2(s,info))
+        print('Результат поиска: ',s), search2(s,info)
+        # s=[]
+        return
     else:
-        return('Совпадений не найдено')
+        print('Совпадений не найдено')
+        return
     
 def search2 (book2: list, info2:str)-> str:
     """Функция используется для уточнения результатов поиска функции search"""
@@ -54,8 +58,10 @@ def search2 (book2: list, info2:str)-> str:
         if sear in contact:
             s2.append(contact)
     if len(s2)>1:
-        return (print(s2), search2(s2,info2))
+        print('Результат поиска: ',s2), search2(s2,info2)
+        return
     if len(s2)==1:
-        return print(s2)
+        print('Результат поиска: 's2)
+        return
     else:
         return('Совпадений не найдено')
